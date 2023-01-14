@@ -1,10 +1,7 @@
-# WebStack-Guns-NKT
- ❤️ 一个开源的网址导航网站项目，后台springboot 在线DEMO https://zywhs.club/  （已停止运营）
+# WebStack-Guns
+ ❤️ 一个开源的网址导航网站项目
 
-一个开源的网址导航网站项目，具备完整的前后台，您可以拿来制作自己的网址导航。文件上传集成七牛云接口，前端懒加载。
-QQ群：861993098
-
-![首页](/screen/1.png)
+一个开源的网址导航网站项目，具备完整的前后台，您可以拿来制作自己的网址导航，前端懒加载。
 
 ## 运行
 
@@ -50,29 +47,11 @@ $ java -jar Webstack-Guns-nkt-1.0.jar
 
 启动完成：http://127.0.0.1:8000
 
-
-
 ## 使用
 
-后台地址：http://domain/admin
+后台地址：http://127.0.0.1:8000/admin
 
 默认用户：admin
 
 默认密码：111111
-
-在线demo: https://zywhs.club/
-
-![主页](/screen/2.png)
-
-![分类](/screen/3.png)
-
-![网站](/screen/4.png)
-
-
-
-## 感谢
-
-前端设计：[**WebStackPage**](https://github.com/WebStackPage/WebStackPage.github.io)
-
-后端参考：[**[jsnjfz]**](https://github.com/jsnjfz/WebStack-Guns)
 
