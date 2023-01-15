@@ -39,12 +39,6 @@ password
 webstack.sql
 ```
 
-maven打包或者IDE启动服务：
-
-```shell
-$ java -jar Webstack-Guns-nkt-1.0.jar
-```
-
 启动完成：http://127.0.0.1:8000
 
 ## 使用
@@ -54,4 +48,11 @@ $ java -jar Webstack-Guns-nkt-1.0.jar
 默认用户：admin
 
 默认密码：111111
+
+## Docker 快速部署
+```shell
+$ docker pull xcallen/mynavications:latest
+
+$ docker run -d -p 8080:8000  -e "DB_IP=yourIp DB_USERNAME=yourName DB_PASSWORD=yourPass" xcallen/mynavications:latest
+```
 
