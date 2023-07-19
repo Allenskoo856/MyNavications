@@ -5,6 +5,11 @@
 
 ## 运行
 
+### Docker-compose 快速部署（推荐）
+
+
+
+### 本地运行开发
 克隆代码：
 
 ```shell
@@ -41,7 +46,7 @@ webstack.sql
 
 启动完成：http://127.0.0.1:8000
 
-## 使用
+### 使用
 
 后台地址：http://127.0.0.1:8000/admin
 
@@ -49,10 +54,13 @@ webstack.sql
 
 默认密码：111111
 
-## Docker 快速部署
+### Docker 快速部署
 ```shell
 $ docker pull xcallen/mynavications:latest
 
 $ docker run -d -p 8080:8000  -e "DB_IP=yourIp DB_USERNAME=yourName DB_PASSWORD=yourPass" xcallen/mynavications:latest
 ```
+
+
+
 
