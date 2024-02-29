@@ -37,7 +37,7 @@ log:
 
 spring:
   datasource:
-    url: jdbc:mysql://${DB_IP}/webstack?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://${DB_IP}:${DB_PORT}/webstack?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT&allowPublicKeyRetrieval=true
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
     filters: wall,mergeStat

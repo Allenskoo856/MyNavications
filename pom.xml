@@ -55,6 +55,12 @@
 			<version>${mysql-connector-java.version}</version>
 		</dependency>
 
+<!--		<dependency>-->
+<!--			<groupId>org.mariadb.jdbc</groupId>-->
+<!--			<artifactId>mariadb-java-client</artifactId>-->
+<!--			<version>2.7.3</version> &lt;!&ndash; 请使用最新的版本 &ndash;&gt;-->
+<!--		</dependency>-->
+
 		<!--spring boot依赖 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
