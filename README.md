@@ -58,7 +58,7 @@ webstack.sql
 ```shell
 $ docker pull xcallen/mynavications:latest
 
-$ docker run -d -p 8080:8000  -e "DB_IP=yourIp DB_USERNAME=yourName DB_PASSWORD=yourPass" xcallen/mynavications:latest
+$ docker run -d -p 8080:8000  -e "DB_IP=yourIp DB_PORT=yourPort DB_USERNAME=yourName DB_PASSWORD=yourPass" xcallen/mynavications:latest
 ```
 
 
