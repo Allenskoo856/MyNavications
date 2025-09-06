@@ -98,6 +98,11 @@
 		</div>
 	</div>
 
+	<!-- 回到顶部按钮 -->
+	<button class="back-to-top" id="backToTop" type="button" title="回到顶部">
+		<i class="fa fa-chevron-up"></i>
+	</button>
+
 
 	<script type="text/javascript">
 	  $(function() {
@@ -130,6 +135,29 @@
 			e.preventDefault();
 			href = $(this).attr("href");
 			pos = $(href).position().top - 30;
+		});
+
+		// 回到顶部按钮功能
+		var backToTopButton = $('#backToTop');
+		
+		// 监听页面滚动
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 300) {
+				backToTopButton.addClass('visible');
+			} else {
+				backToTopButton.removeClass('visible');
+			}
+		});
+		
+		// 点击回到顶部
+		backToTopButton.click(function() {
+			$('html, body').animate({
+				scrollTop: 0
+			}, {
+				duration: 600,
+				easing: 'swing'
+			});
+			return false;
 		});
 	</script>
 </body>
