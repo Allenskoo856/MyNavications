@@ -10,35 +10,28 @@
                     <img src="/static/img/logo-collapsed2x.png" width="40" alt="" />
                 </a>
             </div>
-            <div class="mobile-menu-toggle visible-xs">
-                <a href="#" data-toggle="user-info-menu">
-                    <i class="linecons-cog"></i>
-                </a>
-                <a href="#" data-toggle="mobile-menu">
-                    <i class="fa-bars"></i>
-                </a>
-            </div>
         </header>
-        <ul id="main-menu" class="main-menu">
+        <ul id="side-menu" class="nav metismenu">
             @for(title in titles){
                 @if(tool.isEmpty(title.children)){
                 <li>
                     <a href="#${title.name}" class="smooth">
                         <i class="fa fa-fw ${title.icon}"></i>
-                        <span class="title">${title.name}</span>
+                        <span class="nav-label">${title.name}</span>
                     </a>
                 </li>
                 @}else{
                 <li>
-                    <a>
+                    <a href="#">
                         <i class="fa fa-fw ${title.icon}"></i>
-                        <span class="title">${title.name}</span>
+                        <span class="nav-label">${title.name}</span>
+                        <span class="fa arrow"></span>
                     </a>
-                    <ul>
+                    <ul class="nav nav-second-level">
                         @for(subTitle in title.children){
                         <li>
                             <a href="#${subTitle.name}" class="smooth">
-                                <span class="title">${subTitle.name}</span>
+                                <span class="nav-label">${subTitle.name}</span>
                             </a>
                         </li>
                         @}
