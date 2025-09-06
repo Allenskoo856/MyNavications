@@ -127,8 +127,10 @@ a:hover { color: #0056b3; }
 .sidebar-menu-inner::-webkit-scrollbar-thumb:hover {
     background: rgba(102, 126, 234, 0.5);
 }
+.logo-env .logo-expanded svg { max-width: 180px; height: 60px; margin: 0 auto 20px; display: block; }
 .logo-env .logo-expanded img { max-width: 120px; margin: 0 auto 20px; display: block; }
 .logo-env .logo-collapsed { display: none; }
+.logo-env .logo-collapsed svg { width: 40px; height: 40px; display: block; margin: 0 auto; }
 
 #side-menu {
   padding: 0;
