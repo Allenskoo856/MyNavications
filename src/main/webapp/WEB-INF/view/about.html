@@ -4,35 +4,144 @@
 @include("/common/_header.html"){}
 
 <body class="page-body boxed-container">
-	<nav class="navbar horizontal-menu navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="navbar-brand">
-				<a href="/" class="logo"> <img
-					src="/static/img/logo2x.png" width="100%" alt=""
-					class="hidden-xs"> <img src="/static/img/logo2x.png"
-					width="100%" alt="" class="visible-xs">
+	<nav class="navbar horizontal-menu navbar-fixed-top" style="height: 50px; min-height: 50px;">
+		<div class="navbar-inner" style="padding: 8px 0; min-height: 34px;">
+			<div class="navbar-brand" style="padding: 0 15px;">
+				<a href="/" class="logo" style="display: flex; align-items: center; height: 34px;">
+					<h3 style="margin: 0; color: #fff; font-weight: 600; font-size: 18px; line-height: 1;">MyNavications</h3>
 				</a>
 			</div>
 			<div class="navbar-mobile-clear"></div>
 		</div>
 	</nav>
 	<div class="page-container">
-		<!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
-		<div class="main-content" style="">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="panel panel-default">
-						<!-- 关于项目 -->
-						<h4 class="text-gray">关于项目</h4>
-						<div class="panel-body">
-							<div class="row">
-								<div class="col-sm-12">
-									<blockquote>
-										<p>恭喜你发现彩蛋</p>
-										</br>
-										<p>这是一个导航网站,收入了大部分常用的网站，希望能够解决到你频繁收藏网站的烦恼！</p>
-										<p>如果你有更好的网站或者提议请联系我！</p>
-									</blockquote>
+		<div class="main-content" style="padding-top: 60px; min-height: calc(100vh - 120px);">
+			<div class="container-fluid" style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+				<div class="row">
+					<div class="col-md-12">
+						<!-- 项目介绍 -->
+						<div class="panel panel-default" style="margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: none; border-radius: 10px; overflow: hidden;">
+							<div class="panel-heading" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 20px;">
+								<h3 class="panel-title" style="font-size: 22px; font-weight: 600; margin: 0; display: flex; align-items: center;"><i class="fa fa-compass" style="margin-right: 12px; font-size: 24px;"></i>关于 MyNavications</h3>
+							</div>
+							<div class="panel-body" style="padding: 35px;">
+								<div class="row" style="align-items: stretch;">
+									<div class="col-md-8" style="display: flex; flex-direction: column;">
+										<div style="font-size: 16px; line-height: 1.8; color: #555; flex: 1;">
+											<p style="font-size: 20px; font-weight: 600; color: #333; margin-bottom: 20px; display: flex; align-items: center;">🚀 <span style="margin-left: 8px;">个人导航中心</span></p>
+											<p style="margin-bottom: 25px;">MyNavications 是一个现代化的个人导航网站，专为提升个人工作效率而设计。通过精心分类和整理，收集了各类常用网站和工具，让您告别繁琐的书签管理，快速找到所需资源。</p>
+											<div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin: 0; border-left: 4px solid #667eea;">
+												<h4 style="color: #667eea; margin-bottom: 18px; font-weight: 600; display: flex; align-items: center;">✨ <span style="margin-left: 8px;">核心特性</span></h4>
+												<ul style="margin: 0; padding-left: 0; list-style: none;">
+													<li style="margin-bottom: 12px; display: flex; align-items: flex-start;">🎯 <span style="margin-left: 10px;">智能分类：按功能和用途精确分类，快速定位</span></li>
+													<li style="margin-bottom: 12px; display: flex; align-items: flex-start;">🔒 <span style="margin-left: 10px;">权限管理：完善的后台管理系统，支持用户和角色控制</span></li>
+													<li style="margin-bottom: 12px; display: flex; align-items: flex-start;">📱 <span style="margin-left: 10px;">响应式设计：完美适配各种设备，随时随地访问</span></li>
+													<li style="margin-bottom: 12px; display: flex; align-items: flex-start;">⚡ <span style="margin-left: 10px;">性能优化：懒加载技术，提升页面加载速度</span></li>
+													<li style="margin-bottom: 0; display: flex; align-items: flex-start;">🎨 <span style="margin-left: 10px;">美观界面：现代化 UI 设计，提供优质用户体验</span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4" style="display: flex; align-items: center; justify-content: center;">
+										<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 15px; text-align: center; width: 100%; max-width: 280px;">
+											<i class="fa fa-rocket" style="font-size: 50px; margin-bottom: 20px; display: block;"></i>
+											<h4 style="margin-bottom: 12px; font-weight: 600;">高效导航</h4>
+											<p style="margin: 0; opacity: 0.9; line-height: 1.5;">让每一次浏览都更加高效</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 技术栈介绍 -->
+						<div class="panel panel-default" style="margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: none; border-radius: 10px; overflow: hidden;">
+							<div class="panel-heading" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border: none; padding: 20px;">
+								<h3 class="panel-title" style="font-size: 22px; font-weight: 600; margin: 0; display: flex; align-items: center;"><i class="fa fa-cogs" style="margin-right: 12px; font-size: 24px;"></i>技术架构</h3>
+							</div>
+							<div class="panel-body" style="padding: 35px;">
+								<div class="row" style="margin: 0 -10px;">
+									<div class="col-md-6" style="padding: 0 10px; margin-bottom: 20px;">
+										<div style="background: #fff; border: 1px solid #e9ecef; border-radius: 10px; padding: 25px; height: 160px; display: flex; flex-direction: column; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+											<h4 style="color: #f5576c; margin-bottom: 18px; font-weight: 600; display: flex; align-items: center;"><i class="fa fa-server" style="margin-right: 10px; font-size: 18px;"></i>后端技术</h4>
+											<div style="display: flex; flex-wrap: wrap; gap: 8px; flex: 1; align-content: flex-start;">
+												<span class="badge" style="background: #28a745; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">Spring Boot 2.0.1</span>
+												<span class="badge" style="background: #17a2b8; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">Apache Shiro</span>
+												<span class="badge" style="background: #6f42c1; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">Beetl 模板</span>
+												<span class="badge" style="background: #fd7e14; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">MySQL 8.0</span>
+												<span class="badge" style="background: #20c997; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">MyBatis Plus</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6" style="padding: 0 10px; margin-bottom: 20px;">
+										<div style="background: #fff; border: 1px solid #e9ecef; border-radius: 10px; padding: 25px; height: 160px; display: flex; flex-direction: column; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+											<h4 style="color: #f5576c; margin-bottom: 18px; font-weight: 600; display: flex; align-items: center;"><i class="fa fa-desktop" style="margin-right: 10px; font-size: 18px;"></i>前端技术</h4>
+											<div style="display: flex; flex-wrap: wrap; gap: 8px; flex: 1; align-content: flex-start;">
+												<span class="badge" style="background: #e83e8c; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">HTML5/CSS3</span>
+												<span class="badge" style="background: #007bff; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">Bootstrap</span>
+												<span class="badge" style="background: #ffc107; color: #212529; padding: 6px 12px; border-radius: 20px; font-size: 12px;">jQuery</span>
+												<span class="badge" style="background: #6610f2; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">H-ui 框架</span>
+												<span class="badge" style="background: #dc3545; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">懒加载技术</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row" style="margin: 0 -10px;">
+									<div class="col-md-6" style="padding: 0 10px;">
+										<div style="background: #fff; border: 1px solid #e9ecef; border-radius: 10px; padding: 25px; height: 160px; display: flex; flex-direction: column; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+											<h4 style="color: #f5576c; margin-bottom: 18px; font-weight: 600; display: flex; align-items: center;"><i class="fa fa-shield" style="margin-right: 10px; font-size: 18px;"></i>安全与缓存</h4>
+											<div style="display: flex; flex-wrap: wrap; gap: 8px; flex: 1; align-content: flex-start;">
+												<span class="badge" style="background: #dc3545; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">Shiro 权限控制</span>
+												<span class="badge" style="background: #28a745; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">EhCache 缓存</span>
+												<span class="badge" style="background: #6c757d; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">JWT Token</span>
+												<span class="badge" style="background: #fd7e14; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">Kaptcha 验证码</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6" style="padding: 0 10px;">
+										<div style="background: #fff; border: 1px solid #e9ecef; border-radius: 10px; padding: 25px; height: 160px; display: flex; flex-direction: column; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+											<h4 style="color: #f5576c; margin-bottom: 18px; font-weight: 600; display: flex; align-items: center;"><i class="fa fa-tools" style="margin-right: 10px; font-size: 18px;"></i>工具与部署</h4>
+											<div style="display: flex; flex-wrap: wrap; gap: 8px; flex: 1; align-content: flex-start;">
+												<span class="badge" style="background: #17a2b8; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">Maven 构建</span>
+												<span class="badge" style="background: #0d6efd; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">Docker 部署</span>
+												<span class="badge" style="background: #198754; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">Swagger API</span>
+												<span class="badge" style="background: #6f42c1; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">Lombok</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 联系与贡献 -->
+						<div class="panel panel-default" style="box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: none; border-radius: 10px; overflow: hidden;">
+							<div class="panel-heading" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; border: none; padding: 20px;">
+								<h3 class="panel-title" style="font-size: 22px; font-weight: 600; margin: 0; display: flex; align-items: center;"><i class="fa fa-heart" style="margin-right: 12px; font-size: 24px;"></i>联系与建议</h3>
+							</div>
+							<div class="panel-body" style="padding: 35px;">
+								<div class="row" style="align-items: center;">
+									<div class="col-md-8">
+										<div style="font-size: 16px; line-height: 1.8; color: #555;">
+											<p style="margin-bottom: 25px;">如果您有优质的网站推荐、功能建议或者发现了任何问题，欢迎与我们联系！您的每一个建议都将帮助我们打造更好的导航体验。</p>
+											<div style="background: #e7f3ff; padding: 25px; border-radius: 10px; border-left: 4px solid #4facfe;">
+												<h5 style="color: #4facfe; margin-bottom: 15px; font-weight: 600; display: flex; align-items: center;">💡 <span style="margin-left: 8px;">我们期待您的：</span></h5>
+												<ul style="margin: 0; padding-left: 0; list-style: none;">
+													<li style="margin-bottom: 10px; display: flex; align-items: center;"><i class="fa fa-check-circle" style="color: #4facfe; margin-right: 10px;"></i>优质网站推荐</li>
+													<li style="margin-bottom: 10px; display: flex; align-items: center;"><i class="fa fa-check-circle" style="color: #4facfe; margin-right: 10px;"></i>功能改进建议</li>
+													<li style="margin-bottom: 10px; display: flex; align-items: center;"><i class="fa fa-check-circle" style="color: #4facfe; margin-right: 10px;"></i>用户体验反馈</li>
+													<li style="margin-bottom: 0; display: flex; align-items: center;"><i class="fa fa-check-circle" style="color: #4facfe; margin-right: 10px;"></i>技术交流与讨论</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4" style="display: flex; align-items: center; justify-content: center;">
+										<div style="text-align: center; padding: 25px;">
+											<div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 25px; border-radius: 50%; width: 100px; height: 100px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(79, 172, 254, 0.3);">
+												<i class="fa fa-envelope" style="font-size: 36px;"></i>
+											</div>
+											<h4 style="margin-bottom: 12px; color: #333; font-weight: 600;">联系我们</h4>
+											<p style="margin: 0; color: #666; line-height: 1.5;">期待您的宝贵建议</p>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -40,13 +149,14 @@
 				</div>
 			</div>
 			<!-- Main Footer -->
-			<footer class="main-footer sticky footer-type-1 fixed">
-				<div class="footer-inner">
-					<div class="footer-text">
-						&copy; 2019 <a href="/"><strong>lizl13</strong></a></a>
+			<footer class="main-footer sticky footer-type-1 fixed" style="background: #f8f9fa; border-top: 1px solid #e9ecef; padding: 8px 0; margin-top: 30px;">
+				<div class="footer-inner" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 15px; min-height: 40px;">
+					<div class="footer-text" style="color: #6c757d; font-size: 13px; line-height: 1.2; margin: 0;">
+						&copy; 2019 <a href="/" style="color: #667eea; text-decoration: none; font-weight: 600;"><strong>MyNavications</strong></a>
 					</div>
 					<div class="go-up">
-						<a href="#" rel="go-top"> <i class="fa-angle-up"></i>
+						<a href="#" rel="go-top" style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #667eea; color: white; border-radius: 50%; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 1px 3px rgba(102, 126, 234, 0.3);" onmouseover="this.style.background='#5a67d8'; this.style.transform='translateY(-1px)';" onmouseout="this.style.background='#667eea'; this.style.transform='translateY(0)';">
+							<i class="fa fa-angle-up" style="font-size: 14px;"></i>
 						</a>
 					</div>
 				</div>

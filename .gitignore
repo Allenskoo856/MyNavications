@@ -4,6 +4,7 @@
 *.idea
 target/
 logs/
+*.vscode/
 
 # Log file
 *.log
