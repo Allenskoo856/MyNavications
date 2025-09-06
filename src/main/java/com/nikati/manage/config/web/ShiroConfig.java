@@ -179,6 +179,7 @@ public class ShiroConfig {
         hashMap.put("/static/**", "anon");
         hashMap.put("/kaptcha/**", "anon");
         hashMap.put("/gunsApi/**", "anon");
+        hashMap.put("/api/**", "anon");  // 添加API接口的匿名访问权限
         hashMap.put("/login", "anon");
         hashMap.put("/global/sessionError", "anon");
         hashMap.put("/kaptcha", "anon");

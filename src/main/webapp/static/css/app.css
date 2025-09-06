@@ -544,3 +544,138 @@ h4.text-gray:first-of-type { margin-top: 0; }
 .main-footer .go-up {
     display: none !important;
 }
+
+/* Ajax搜索功能样式 */
+/* 搜索状态提示 */
+.search-status {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 30px;
+    margin: 20px auto;
+    max-width: 717px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    animation: slideInDown 0.3s ease;
+}
+
+.search-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.search-info span {
+    font-size: 14px;
+    font-weight: 500;
+    flex: 1;
+}
+
+.clear-search-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.clear-search-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+/* 加载状态 */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: var(--secondary-text-color);
+}
+
+.loading-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.loading i {
+    font-size: 18px;
+    color: var(--accent-color);
+}
+
+/* 空搜索结果样式 */
+.no-results {
+    text-align: center;
+    padding: 60px 30px;
+    color: var(--secondary-text-color);
+}
+
+.no-results i {
+    font-size: 48px;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.no-results h3 {
+    color: var(--primary-text-color);
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.no-results p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* 动画效果 */
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 搜索结果容器动画 */
+#content-container {
+    animation: fadeIn 0.3s ease;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .search-status {
+        margin: 15px;
+        padding: 12px 20px;
+    }
+    
+    .search-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .clear-search-btn {
+        align-self: flex-end;
+    }
+}
