@@ -7,12 +7,7 @@
                 <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('${site.url}', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="${site.url}">
                     <div class="xe-comment-entry">
                         <a class="xe-user-img">
-                         @if(isNotEmpty(site.thumb)){
-                         <img data-original="/kaptcha/${site.thumb}" class="img-circle" width="40">
-                          @}
-                          @if(!isNotEmpty(site.thumb)){
-                         <img data-original="${ctxPath}/static/img/github.png" class="img-circle" width="40">
-                          @}
+                         <i class="fa fa-globe random-icon" style="font-size: 24px; color: #667eea; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-radius: 50%; border: 2px solid #e9ecef;"></i>
                         </a>
                         <div class="xe-comment">
                             <a href="#" class="xe-user-name overflowClip_1">
@@ -34,3 +29,28 @@
     <h4   style="margin-top: 20px;" class="text-gray">如有需要可以联系838486863\@qq.com</h4>
         </div>
     @}
+
+<script>
+$(document).ready(function() {
+    // Font Awesome图标数组 - 适合网站/应用的图标
+    var icons = [
+        'fa-globe', 'fa-desktop', 'fa-mobile', 'fa-laptop', 'fa-tablet',
+        'fa-code', 'fa-cogs', 'fa-database', 'fa-server', 'fa-cloud',
+        'fa-rocket', 'fa-star', 'fa-heart', 'fa-gem', 'fa-shield',
+        'fa-bookmark', 'fa-tag', 'fa-flag', 'fa-home', 'fa-building',
+        'fa-graduation-cap', 'fa-book', 'fa-newspaper-o', 'fa-camera', 'fa-music',
+        'fa-gamepad', 'fa-shopping-cart', 'fa-credit-card', 'fa-chart-bar', 'fa-pie-chart',
+        'fa-paint-brush', 'fa-palette', 'fa-image', 'fa-video-camera', 'fa-microphone',
+        'fa-headphones', 'fa-wifi', 'fa-bluetooth', 'fa-rss', 'fa-share-alt'
+    ];
+    
+    // 为每个random-icon元素随机分配图标
+    $('.random-icon').each(function() {
+        var randomIndex = Math.floor(Math.random() * icons.length);
+        var randomIcon = icons[randomIndex];
+        
+        // 移除默认的fa-globe类并添加随机图标类
+        $(this).removeClass('fa-globe').addClass(randomIcon);
+    });
+});
+</script>
