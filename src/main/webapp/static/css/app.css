@@ -402,7 +402,7 @@ h4.text-gray:first-of-type { margin-top: 0; }
   background: var(--content-background);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 15px;
+  padding: 20px; /* 增加内边距，从15px增加到20px */
   height: 100%;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -447,15 +447,30 @@ h4.text-gray:first-of-type { margin-top: 0; }
 .xe-comment-entry {
   display: flex;
   align-items: center;
+  gap: 20px; /* 增加图标与文本的间距 */
 }
+
+/* 图标容器样式 */
+.xe-user-img {
+  flex-shrink: 0; /* 防止图标被压缩 */
+  margin-right: 5px; /* 额外的右边距 */
+}
+
 .xe-user-img img {
   width: 40px;
   height: 40px;
   border-radius: 8px;
-  margin-right: 15px;
 }
+
+/* Font Awesome图标特殊样式 */
+.xe-user-img .random-icon {
+  margin-right: 0; /* 重置图标本身的右边距 */
+}
+
 .xe-comment {
   overflow: hidden;
+  flex: 1; /* 让文本区域占据剩余空间 */
+  padding-left: 8px; /* 文本区域的左内边距 */
 }
 .xe-user-name strong {
   display: block;
