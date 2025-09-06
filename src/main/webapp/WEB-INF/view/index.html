@@ -108,33 +108,35 @@
 	  $(function() {
 		  $("img").lazyload({ threshold :180});
 	  });
-		$(document).ready(
-			function() {
-				$("a.smooth").click(
-						function(ev) {
-							ev.preventDefault();
-							$("html, body").animate(
-									{
-										scrollTop : $($(this).attr("href"))
-												.offset().top - 30
-									}, {
-										duration : 500,
-										easing : "swing"
-									});
+		
+		// 优化的平滑滚动导航功能（合并重复事件处理）
+		$(document).ready(function() {
+			$("a.smooth").off('click').on('click', function(e) {
+				e.preventDefault();
+				e.stopPropagation(); // 防止事件冒泡
+				
+				// 更新活动状态
+				$("#side-menu li").removeClass("active");
+				$(this).closest("li").addClass("active");
+				
+				// 获取目标位置
+				var target = $(this).attr("href");
+				var $target = $(target);
+				
+				if ($target.length) {
+					var targetTop = $target.offset().top - 30;
+					
+					// 优化的平滑滚动，缩短动画时间
+					$("html, body").animate({
+						scrollTop: targetTop
+					}, {
+						duration: 300, // 从500ms减少到300ms
+						easing: "swing"
 					});
+				}
+				
 				return false;
 			});
-
-		var href = "";
-		var pos = 0;
-		$("a.smooth").click(function(e) {
-			$("#side-menu li").each(function() {
-				$(this).removeClass("active");
-			});
-			$(this).parent("li").addClass("active");
-			e.preventDefault();
-			href = $(this).attr("href");
-			pos = $(href).position().top - 30;
 		});
 
 		// 回到顶部按钮功能
@@ -154,7 +156,7 @@
 			$('html, body').animate({
 				scrollTop: 0
 			}, {
-				duration: 600,
+				duration: 400, // 略微减少回到顶部的动画时间
 				easing: 'swing'
 			});
 			return false;

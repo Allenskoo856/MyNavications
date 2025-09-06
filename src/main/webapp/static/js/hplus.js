@@ -4,13 +4,8 @@ $(document).ready(function () {
     // 初始化MetisMenu
     $('#side-menu').metisMenu();
     
-    // 点击菜单时的高亮处理
-    $("#side-menu a.smooth").click(function(){
-        // 移除所有活动状态
-        $("#side-menu li").removeClass("active");
-        // 为当前点击的菜单项添加活动状态
-        $(this).closest("li").addClass("active");
-    });
+    // 注释掉重复的点击事件处理，现在由index.html统一处理
+    // 原有的点击菜单时的高亮处理已移至index.html中优化处理
 
     // iOS浏览器兼容性处理
     if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
