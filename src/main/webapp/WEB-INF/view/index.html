@@ -38,6 +38,9 @@
 
 
 
+			<!-- 搜索框占位空间 -->
+			<div id="search-placeholder" class="search-placeholder"></div>
+
 			<div id="search" class="s-search">
 				<div id="search-list" class="hide-type-list">
 					<div class="s-type">
@@ -421,12 +424,41 @@
 		// 回到顶部按钮功能
 		var backToTopButton = $('#backToTop');
 		
+		// 搜索框悬浮固定功能
+		var searchBox = $('#search');
+		var searchPlaceholder = $('#search-placeholder');
+		var searchOriginalTop = searchBox.offset().top;
+		var isSearchFixed = false;
+		
 		// 监听页面滚动
 		$(window).scroll(function() {
-			if ($(this).scrollTop() > 300) {
+			var scrollTop = $(this).scrollTop();
+			
+			// 搜索框悬浮固定逻辑
+			if (scrollTop > searchOriginalTop - 20 && !isSearchFixed) {
+				// 激活悬浮模式
+				isSearchFixed = true;
+				searchBox.addClass('fixed-search');
+				searchPlaceholder.addClass('active');
+			} else if (scrollTop <= searchOriginalTop - 20 && isSearchFixed) {
+				// 取消悬浮模式
+				isSearchFixed = false;
+				searchBox.removeClass('fixed-search');
+				searchPlaceholder.removeClass('active');
+			}
+			
+			// 回到顶部按钮显示逻辑
+			if (scrollTop > 300) {
 				backToTopButton.addClass('visible');
 			} else {
 				backToTopButton.removeClass('visible');
+			}
+		});
+		
+		// 重新计算搜索框原始位置（窗口大小改变时）
+		$(window).resize(function() {
+			if (!isSearchFixed) {
+				searchOriginalTop = searchBox.offset().top;
 			}
 		});
 		
