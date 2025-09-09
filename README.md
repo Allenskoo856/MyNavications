@@ -400,6 +400,7 @@ A: 检查网络配置和环境变量设置，确保数据库服务可访问。
 - [在线演示](https://demo.mynavications.com)
 - [问题反馈](https://github.com/your-username/MyNavications/issues)
 - [更新日志](CHANGELOG.md)
+ - [Wiki](https://github.com/Allenskoo856/MyNavications/wiki) - 项目文档 Wiki
 
 ## 📞 联系我们
 
